@@ -1,6 +1,7 @@
+import * as SC from "./AboutStyled"
 const About = () => {
   return (
-    <div>
+    <SC.AboutConStyled id="about">
       <div>
         <h3>About this porject</h3>
         <p>
@@ -66,7 +67,7 @@ const About = () => {
           </div>
         </li>
       </ul>
-    </div>
+    </SC.AboutConStyled>
   );
 };
 
