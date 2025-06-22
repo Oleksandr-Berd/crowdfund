@@ -17,7 +17,7 @@ const About = () => {
           sticks to be stored under the stand.
         </p>
       </SC.AboutContentCon>
-      <ul>
+      <SC.AboutList>
         <li>
           <h4>Bamboo Stand</h4>
           <h5>Pledge $25 or more</h5>
@@ -27,11 +27,11 @@ const About = () => {
             Backer member list.
           </p>
           <div>
-            <div>
+            <SC.AboutDataCon>
               <h6>101</h6>
               <p>left</p>
-            </div>
-            <button>Select reward</button>
+            </SC.AboutDataCon>
+            <SC.AboutRewarBtn>Select reward</SC.AboutRewarBtn>
           </div>
         </li>
         <li>
@@ -43,11 +43,11 @@ const About = () => {
             included.
           </p>
           <div>
-            <div>
+            <SC.AboutDataCon>
               <h6>64</h6>
               <p>left</p>
-            </div>
-            <button>Select reward</button>
+            </SC.AboutDataCon>
+            <SC.AboutRewarBtn>Select reward</SC.AboutRewarBtn>
           </div>
         </li>
         <li>
@@ -59,14 +59,14 @@ const About = () => {
             Shipping is included.
           </p>
           <div>
-            <div>
+            <SC.AboutDataCon>
               <h6>0</h6>
               <p>left</p>
-            </div>
-            <button>Select reward</button>
+            </SC.AboutDataCon>
+            <SC.AboutRewarBtn>Select reward</SC.AboutRewarBtn>
           </div>
         </li>
-      </ul>
+      </SC.AboutList>
     </SC.AboutConStyled>
   );
 };
