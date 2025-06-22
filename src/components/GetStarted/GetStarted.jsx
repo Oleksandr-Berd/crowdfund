@@ -2,16 +2,16 @@ import * as SC from "./GetStartedStyled"
 const GetStarted = () => {
   return (
     <SC.GetStartedConStyled id="getStarted">
-      <div>
-        <h3>Mastercraft Bamboo Monitor Riser</h3>
-        <p>
+      <SC.GetStartedContentCon>
+        <SC.GetStartedTitleStyled>Mastercraft Bamboo Monitor Riser</SC.GetStartedTitleStyled>
+        <SC.GetStartedContentStyled>
           A beautifully handcrafted monitor stand to reduce neck and eye strain.
-        </p>
-      </div>
-      <div>
-        <button type="button">Back this project</button>
-        <button>Bookmark</button>
-      </div>
+        </SC.GetStartedContentStyled>
+      </SC.GetStartedContentCon>
+      <SC.GetStartedBtnsCon>
+        <SC.GetStartedBackBtnStyled type="button">Back this project</SC.GetStartedBackBtnStyled>
+        <SC.GetStartedBookmark></SC.GetStartedBookmark>
+      </SC.GetStartedBtnsCon>
     </SC.GetStartedConStyled>
   );
 };
