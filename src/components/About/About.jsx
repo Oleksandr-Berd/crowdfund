@@ -2,7 +2,7 @@ import * as SC from "./AboutStyled"
 const About = () => {
   return (
     <SC.AboutConStyled id="about">
-      <div>
+      <SC.AboutContentCon>
         <h3>About this porject</h3>
         <p>
           The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
@@ -16,7 +16,7 @@ const About = () => {
           extra desk space below your computer to allow notepads, pens, and USB
           sticks to be stored under the stand.
         </p>
-      </div>
+      </SC.AboutContentCon>
       <ul>
         <li>
           <h4>Bamboo Stand</h4>
