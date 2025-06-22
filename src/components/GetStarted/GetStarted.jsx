@@ -1,5 +1,5 @@
 import * as SC from "./GetStartedStyled"
-const GetStarted = () => {
+const GetStarted = ({toggleProject}) => {
   return (
     <SC.GetStartedConStyled id="getStarted">
       <SC.GetStartedContentCon>
@@ -9,7 +9,7 @@ const GetStarted = () => {
         </SC.GetStartedContentStyled>
       </SC.GetStartedContentCon>
       <SC.GetStartedBtnsCon>
-        <SC.GetStartedBackBtnStyled type="button">Back this project</SC.GetStartedBackBtnStyled>
+        <SC.GetStartedBackBtnStyled type="button" onClick={toggleProject}>Back this project</SC.GetStartedBackBtnStyled>
         <SC.GetStartedBookmark></SC.GetStartedBookmark>
       </SC.GetStartedBtnsCon>
     </SC.GetStartedConStyled>
