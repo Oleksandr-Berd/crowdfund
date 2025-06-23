@@ -19,7 +19,7 @@ const toggleProject = () => {
             <GetStarted toggleProject={toggleProject}/>
             <Discover/>
             <About/>
-            {isProject ? <Portal><Project/></Portal> : null}
+            {isProject ? <Portal><Project toggleProject={toggleProject} isProject={isProject}/></Portal> : null}
         </SC.SharedLayoutStyled>
      );
 }
