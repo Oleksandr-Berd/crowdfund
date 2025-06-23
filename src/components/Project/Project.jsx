@@ -9,10 +9,6 @@ const Project = ({ toggleProject }) => {
     },
   });
 
-  const { noReward, bamboo, blackEdition, mahogany } = formik.values;
-
-  console.log(noReward, bamboo, blackEdition, mahogany);
-
   return (
     <SC.FormStyled>
       <SC.ProjectCon>
