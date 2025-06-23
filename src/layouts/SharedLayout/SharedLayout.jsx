@@ -4,6 +4,8 @@ import About from "../../components/About/About";
 import Discover from "../../components/Discover/Discover";
 import GetStarted from "../../components/GetStarted/GetStarted";
 import * as SC from "./SharedLayoutStyled"
+import Portal from "../../utils/portal";
+import Project from "../../components/Project/Project";
 const SharedLayout = () => {
 
 const [isProject, setIsProject] = useState(false)
@@ -17,6 +19,7 @@ const toggleProject = () => {
             <GetStarted toggleProject={toggleProject}/>
             <Discover/>
             <About/>
+            {isProject ? <Portal><Project/></Portal> : null}
         </SC.SharedLayoutStyled>
      );
 }

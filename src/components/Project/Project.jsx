@@ -1,7 +1,24 @@
+import * as SC from "./ProjectStyled"
+
+import { useFormik } from "formik";
+
 const Project = () => {
+  const formik = useFormik({
+    initialValues: {
+      noReward: false,
+      bamboo: false,
+      blackEdition: false,
+      mahogany: false,
+    },
+  });
+
+  const { noReward, bamboo, blackEdition, mahogany } = formik.values;
+
+  console.log(noReward, bamboo, blackEdition, mahogany);
+
   return (
-    <div>
-      <div>
+    <SC.FormStyled>
+      <SC.ProjectCon>
         <div>
           <div>
             <h3>Back this project</h3>
@@ -26,8 +43,8 @@ const Project = () => {
           </li>
           <li>
             <div>
-              <label htmlFor="noReward">
-                <input type="radio" name="noReward" />
+              <label htmlFor="bamboo">
+                <input type="radio" name="bamboo" />
               </label>
               <div>
                 <p>Bamboo Stand</p>
@@ -44,11 +61,49 @@ const Project = () => {
               <p>left</p>
             </div>
           </li>
-          <li></li>
-          <li></li>
+          <li>
+            <div>
+              <label htmlFor="blackEdition">
+                <input type="radio" name="blackEdition" />
+              </label>
+              <div>
+                <p>Black Edition Stand</p>
+                <p>Pledge $75 or more</p>
+              </div>
+            </div>
+            <p>
+              You get a Black Special Edition computer stand and a personal
+              thank you. You’ll be added to our Backer member list. Shipping is
+              included.
+            </p>
+            <div>
+              <p>64</p>
+              <p>left</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <label htmlFor="mahogany">
+                <input type="radio" name="mahogany" />
+              </label>
+              <div>
+                <p>Mahogany Special Edition</p>
+                <p>Pledge $200 or more</p>
+              </div>
+            </div>
+            <p>
+              You get two Special Edition Mahogany stands, a Backer T-Shirt, and
+              a personal thank you. You’ll be added to our Backer member list.
+              Shipping is included.
+            </p>
+            <div>
+              <p>0</p>
+              <p>left</p>
+            </div>
+          </li>
         </ul>
-      </div>
-    </div>
+      </SC.ProjectCon>
+    </SC.FormStyled>
   );
 };
 
