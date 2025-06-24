@@ -14,7 +14,7 @@ const NavMenu = ({closeNavMenu}) => {
     return ( 
         <SC.NavMenuOverlay>
         <nav>
-            <ul>
+            <SC.NavList>
                 <li>
                    <button onClick={() => handleScroll("about")}>About</button>
                 </li>
@@ -24,7 +24,7 @@ const NavMenu = ({closeNavMenu}) => {
                 <li>
                    <button onClick={() => handleScroll("getStarted")}>Get Started</button>
                 </li>
-            </ul>
+            </SC.NavList>
         </nav>
         </SC.NavMenuOverlay>
     );
