@@ -7,7 +7,7 @@ import * as SC from "./SharedLayoutStyled"
 import Portal from "../../utils/portal";
 import Project from "../../components/Project/Project";
 import NavMenu from "../../components/NavMenu/NavMenu";
-const SharedLayout = ({toggleNavMenu, isNavMenu}) => {
+const SharedLayout = ({toggleNavMenu, isNavMenu,closeNavMenu }) => {
 
 const [isProject, setIsProject] = useState(false)
 
@@ -23,7 +23,7 @@ const toggleProject = () => {
             <Discover/>
             <About/>
             {isProject ? <Portal><Project toggleProject={toggleProject} isProject={isProject}/></Portal> 
-            : isNavMenu ? <Portal><NavMenu toggleProject={toggleNavMenu}/></Portal>
+            : isNavMenu ? <Portal><NavMenu toggleProject={toggleNavMenu} closeNavMenu={closeNavMenu}/></Portal>
             :null}
         </SC.SharedLayoutStyled>
      );

@@ -1,18 +1,28 @@
+
 import * as SC from "./NavMenuStyled"
 
-const NavMenu = ({toggleNavMenu}) => {
+const NavMenu = ({closeNavMenu}) => {
+
+   const handleScroll = (targetId) => {
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    closeNavMenu();
+  };
+
     return ( 
         <SC.NavMenuOverlay>
         <nav>
             <ul>
                 <li>
-                    <a href="#about" onClick={toggleNavMenu}>About</a>
+                   <button onClick={() => handleScroll("about")}>About</button>
                 </li>
                 <li>
-                    <a href="#discover" onClick={toggleNavMenu}>Discover</a>
+                   <button onClick={() => handleScroll("discover")}>Discover</button>
                 </li>
                 <li>
-                    <a href="#getStarted" onClick={toggleNavMenu}>Get Started</a>
+                   <button onClick={() => handleScroll("getStarted")}>Get Started</button>
                 </li>
             </ul>
         </nav>

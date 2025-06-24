@@ -12,10 +12,14 @@ const toggleNavMenu = () => {
     setIsNavMenu(!isNavMenu)
 }
 
+  const closeNavMenu = () => {
+    setIsNavMenu(false)
+  }
+
   return (
     <>
      <Header toggleNavMenu={toggleNavMenu}/>
-     <SharedLayout toggleNavMenu={toggleNavMenu} isNavMenu={isNavMenu}/>
+     <SharedLayout toggleNavMenu={toggleNavMenu} isNavMenu={isNavMenu} closeNavMenu={closeNavMenu}/>
     </>
   )
 }
