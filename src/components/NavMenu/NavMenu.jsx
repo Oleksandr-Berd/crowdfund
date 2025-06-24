@@ -1,7 +1,8 @@
 
+import { useEffect } from "react";
 import * as SC from "./NavMenuStyled"
 
-const NavMenu = ({closeNavMenu}) => {
+const NavMenu = ({closeNavMenu, isNavMenu}) => {
 
    const handleScroll = (targetId) => {
     const el = document.getElementById(targetId);
@@ -11,8 +12,20 @@ const NavMenu = ({closeNavMenu}) => {
     closeNavMenu();
   };
 
+  useEffect(() => {
+  if (isNavMenu) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [isNavMenu]);
+
     return ( 
-        <SC.NavMenuOverlay>
+        <SC.NavMenuOverlay onClick={closeNavMenu}>
         <nav>
             <SC.NavList>
                 <li>

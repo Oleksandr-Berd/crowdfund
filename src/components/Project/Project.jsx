@@ -2,7 +2,7 @@ import * as SC from "./ProjectStyled";
 
 import { useFormik } from "formik";
 
-const Project = ({ toggleProject }) => {
+const Project = ({ toggleProject, toggleGrace }) => {
   const formik = useFormik({
     initialValues: {
       choose: "",
@@ -53,7 +53,7 @@ const Project = ({ toggleProject }) => {
                       <SC.Bucks>$</SC.Bucks>
                       <input type="text" name="pledge" placeholder="0" />
                     </label>
-                    <button type="submit">Continue</button>
+                    <button type="button" onClick={toggleGrace}>Continue</button>
                   </div>
                 </SC.AccordCon>
               </>
@@ -94,7 +94,7 @@ const Project = ({ toggleProject }) => {
                       <SC.Bucks>$</SC.Bucks>
                       <input type="text" name="pledge" placeholder="25" />
                     </label>
-                    <button type="submit">Continue</button>
+                    <button type="button" onClick={toggleGrace}>Continue</button>
                   </div>
                 </SC.AccordCon>
               </>
@@ -135,7 +135,7 @@ const Project = ({ toggleProject }) => {
                       <SC.Bucks>$</SC.Bucks>
                       <input type="text" name="pledge" placeholder="75" />
                     </label>
-                    <button type="submit">Continue</button>
+                    <button type="button" onClick={toggleGrace}>Continue</button>
                   </div>
                 </SC.AccordCon>
               </>
@@ -176,7 +176,7 @@ const Project = ({ toggleProject }) => {
                       <SC.Bucks>$</SC.Bucks>
                       <input type="text" name="pledge" placeholder="200" />
                     </label>
-                    <button type="submit">Continue</button>
+                    <button type="button" onClick={toggleGrace}>Continue</button>
                   </div>
                 </SC.AccordCon>
               </>

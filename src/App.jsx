@@ -18,7 +18,7 @@ const toggleNavMenu = () => {
 
   return (
     <>
-     <Header toggleNavMenu={toggleNavMenu}/>
+     <Header toggleNavMenu={toggleNavMenu} isNavMenu={isNavMenu}/>
      <SharedLayout toggleNavMenu={toggleNavMenu} isNavMenu={isNavMenu} closeNavMenu={closeNavMenu}/>
     </>
   )
