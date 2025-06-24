@@ -1,9 +1,9 @@
-import * as SC from "./AboutStyled"
+import * as SC from "./AboutStyled";
 const About = () => {
   return (
     <SC.AboutConStyled id="about">
       <SC.AboutContentCon>
-        <h3>About this porject</h3>
+        <h3>About this project</h3>
         <p>
           The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
           that elevates your screen to a more comfortable viewing height.
@@ -19,52 +19,58 @@ const About = () => {
       </SC.AboutContentCon>
       <SC.AboutList>
         <li>
-          <h4>Bamboo Stand</h4>
-          <h5>Pledge $25 or more</h5>
+          <SC.ItemTitleCon>
+            <h4>Bamboo Stand</h4>
+            <h5>Pledge $25 or more</h5>
+          </SC.ItemTitleCon>
           <p>
             You get an ergonomic stand made of natural bamboo. You've helped us
             launch our promotional campaign, and you’ll be added to a special
             Backer member list.
           </p>
-          <div>
+          <SC.AboutDataBtnCon>
             <SC.AboutDataCon>
               <h6>101</h6>
               <p>left</p>
             </SC.AboutDataCon>
             <SC.AboutRewarBtn>Select reward</SC.AboutRewarBtn>
-          </div>
+          </SC.AboutDataBtnCon>
         </li>
         <li>
-          <h4>Black Edition Stand</h4>
-          <h5>Pledge $75 or more</h5>
+          <SC.ItemTitleCon>
+            <h4>Black Edition Stand</h4>
+            <h5>Pledge $75 or more</h5>
+          </SC.ItemTitleCon>
           <p>
             You get a Black Special Edition computer stand and a personal thank
             you. You’ll be added to our Backer member list. Shipping is
             included.
           </p>
-          <div>
+          <SC.AboutDataBtnCon>
             <SC.AboutDataCon>
               <h6>64</h6>
               <p>left</p>
             </SC.AboutDataCon>
             <SC.AboutRewarBtn>Select reward</SC.AboutRewarBtn>
-          </div>
+          </SC.AboutDataBtnCon>
         </li>
         <li>
-          <h4>Mahogany Special Edition</h4>
-          <h5>Pledge $200 or more</h5>
+          <SC.ItemTitleCon>
+            <h4>Mahogany Special Edition</h4>
+            <h5>Pledge $200 or more</h5>
+          </SC.ItemTitleCon>
           <p>
             You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
             personal thank you. You’ll be added to our Backer member list.
             Shipping is included.
           </p>
-          <div>
+          <SC.AboutDataBtnCon>
             <SC.AboutDataCon>
               <h6>0</h6>
               <p>left</p>
             </SC.AboutDataCon>
             <SC.AboutRewarBtn>Select reward</SC.AboutRewarBtn>
-          </div>
+          </SC.AboutDataBtnCon>
         </li>
       </SC.AboutList>
     </SC.AboutConStyled>
