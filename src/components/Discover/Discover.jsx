@@ -19,7 +19,7 @@ const Discover = () => {
                     <p>days left</p>
                 </SC.DiscoverItem>
             </ul>
-            <div></div>
+            <SC.DiscoverScale></SC.DiscoverScale>
         </SC.DiscoverConStyled>
      );
 }

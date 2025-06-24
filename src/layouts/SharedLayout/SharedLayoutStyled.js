@@ -7,7 +7,9 @@ padding-right: 24px;
 
 background-color: #FAFAFA;
 
-& > *:not(:last-of-type){
-    margin-bottom: 24px;
+@media (min-width: 1280px){
+    padding: 0;
+
+    text-align: center;
 }
 `

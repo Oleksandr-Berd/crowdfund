@@ -1,5 +1,9 @@
+import { useScreenSize } from "../../hooks/useScreenSize";
 import * as SC from "./GetStartedStyled"
 const GetStarted = ({toggleProject}) => {
+
+const {isDesktop} = useScreenSize()
+
   return (
     <SC.GetStartedConStyled id="getStarted">
       <SC.GetStartedContentCon>
@@ -10,7 +14,7 @@ const GetStarted = ({toggleProject}) => {
       </SC.GetStartedContentCon>
       <SC.GetStartedBtnsCon>
         <SC.GetStartedBackBtnStyled type="button" onClick={toggleProject}>Back this project</SC.GetStartedBackBtnStyled>
-        <SC.GetStartedBookmark></SC.GetStartedBookmark>
+        <SC.GetStartedBookmark>{isDesktop ? "Bookmark" : null}</SC.GetStartedBookmark>
       </SC.GetStartedBtnsCon>
     </SC.GetStartedConStyled>
   );
