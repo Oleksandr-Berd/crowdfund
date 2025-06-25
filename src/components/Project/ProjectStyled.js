@@ -16,6 +16,13 @@ export const FormStyled = styled.form`
   padding-right: 24px;
 
   background-color: rgba(0, 0, 0, 0.7);
+
+  @media (min-width: 1280px) {
+    padding-top: 184px;
+    padding-bottom: 280px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 export const ProjectCon = styled.div`
@@ -27,6 +34,29 @@ export const ProjectCon = styled.div`
   background-color: #fff;
 
   border-radius: 8px;
+
+  @media (min-width: 1280px) {
+    width: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+`;
+
+export const PledgeCon = styled.div`
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    & > *:not(:last-of-type) {
+      margin-right: 16px;
+    }
+
+  }
 `;
 
 export const TitleCon = styled.div`
@@ -50,6 +80,13 @@ export const CloseBtn = styled.button`
   border: none;
 
   background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z' fill='%23000' fill-rule='evenodd' opacity='0.4'/%3E%3C/svg%3E");
+
+  @media (min-width: 1280px){
+
+    &:hover, &:focus, &:active{
+        cursor: pointer;
+    }
+  }
 `;
 
 export const FormContent = styled.p`
@@ -91,6 +128,10 @@ export const InputCon = styled.div`
   & > *:first-of-type {
     margin-right: 8px;
   }
+
+  @media (min-width: 1280px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const ItemTitle = styled.p`
@@ -99,6 +140,10 @@ export const ItemTitle = styled.p`
   font-weight: 700;
 
   color: #000;
+
+  @media (min-width: 1280px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const ItemPrice = styled.p`
@@ -153,6 +198,13 @@ export const AccordCon = styled.div`
 
   text-align: center;
 
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   & > p {
     margin-bottom: 16px;
 
@@ -160,6 +212,10 @@ export const AccordCon = styled.div`
     line-height: 1.7;
 
     color: #7a7a7a;
+
+    @media (min-width: 1280px) {
+      margin-bottom: 0;
+    }
   }
 
   & > div {
@@ -209,6 +265,12 @@ export const AccordCon = styled.div`
 
     border-radius: 32px;
 
+    @media (min-width: 1280px){
+
+        &:focus, &:active, &:hover{
+            
+        }
+    }
   }
 `;
 

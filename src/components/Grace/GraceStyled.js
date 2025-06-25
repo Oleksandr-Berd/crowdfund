@@ -31,14 +31,25 @@ export const GraceCon = styled.div`
 
   border-radius: 8px;
 
-  & > h3{
+  @media (min-width: 1280px) {
+    width: 38%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  & > h3 {
     margin-bottom: 24px;
 
     font-size: 24px;
     font-weight: 700;
   }
 
-  & > p{
+  & > p {
     margin-bottom: 32px;
 
     font-size: 14px;
@@ -47,7 +58,7 @@ export const GraceCon = styled.div`
     color: #7a7a7a;
   }
 
-  & > button{
+  & > button {
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 32px;
@@ -56,10 +67,23 @@ export const GraceCon = styled.div`
     font-size: 14px;
     font-weight: 700;
 
-    background-color: #3CB3AB;
+    background-color: #3cb3ab;
     color: #fff;
 
     border-radius: 32px;
+    transition: background 0.3s;
+
+    @media (min-width: 1280px) {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #147a73;
+
+        transition: background 0.3s;
+      }
+
+      cursor: pointer;
+    }
   }
 `;
 

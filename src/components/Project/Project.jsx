@@ -1,8 +1,11 @@
+import { useScreenSize } from "../../hooks/useScreenSize";
 import * as SC from "./ProjectStyled";
 
 import { useFormik } from "formik";
 
 const Project = ({ toggleProject, toggleGrace }) => {
+  const { isDesktop } = useScreenSize();
+
   const formik = useFormik({
     initialValues: {
       choose: "",
@@ -53,7 +56,9 @@ const Project = ({ toggleProject, toggleGrace }) => {
                       <SC.Bucks>$</SC.Bucks>
                       <input type="text" name="pledge" placeholder="0" />
                     </label>
-                    <button type="button" onClick={toggleGrace}>Continue</button>
+                    <button type="button" onClick={toggleGrace}>
+                      Continue
+                    </button>
                   </div>
                 </SC.AccordCon>
               </>
@@ -70,20 +75,34 @@ const Project = ({ toggleProject, toggleGrace }) => {
                   checked={formik.values.choose === "bamboo"}
                 />
               </label>
-              <div>
-                <SC.ItemTitle>Bamboo Stand</SC.ItemTitle>
-                <SC.ItemPrice>Pledge $25 or more</SC.ItemPrice>
-              </div>
+              {isDesktop ? (
+                <SC.PledgeCon>
+                  <SC.ItemTitle>Bamboo Stand</SC.ItemTitle>
+                  <SC.ItemPrice>Pledge $25 or more</SC.ItemPrice>
+                  <SC.Leftover>
+                    <p>101</p>
+                    <p>left</p>
+                  </SC.Leftover>
+                </SC.PledgeCon>
+              ) : (
+                <div>
+                  <SC.ItemTitle>Bamboo Stand</SC.ItemTitle>
+                  <SC.ItemPrice>Pledge $25 or more</SC.ItemPrice>
+                </div>
+              )}
             </SC.InputCon>
             <SC.ItemContent>
               You get an ergonomic stand made of natural bamboo. You've helped
               us launch our promotional campaign, and you’ll be added to a
               special Backer member list.
             </SC.ItemContent>
-            <SC.Leftover>
-              <p>101</p>
-              <p>left</p>
-            </SC.Leftover>
+            {!isDesktop ? (
+              <SC.Leftover>
+                <p>101</p>
+                <p>left</p>
+              </SC.Leftover>
+            ) : null}
+
             {formik.values.choose === "bamboo" ? (
               <>
                 <SC.Line></SC.Line>
@@ -94,7 +113,9 @@ const Project = ({ toggleProject, toggleGrace }) => {
                       <SC.Bucks>$</SC.Bucks>
                       <input type="text" name="pledge" placeholder="25" />
                     </label>
-                    <button type="button" onClick={toggleGrace}>Continue</button>
+                    <button type="button" onClick={toggleGrace}>
+                      Continue
+                    </button>
                   </div>
                 </SC.AccordCon>
               </>
@@ -111,20 +132,33 @@ const Project = ({ toggleProject, toggleGrace }) => {
                   checked={formik.values.choose === "blackEdition"}
                 />
               </label>
-              <div>
-                <SC.ItemTitle>Black Edition Stand</SC.ItemTitle>
-                <SC.ItemPrice>Pledge $75 or more</SC.ItemPrice>
-              </div>
+               {isDesktop ? (
+                <SC.PledgeCon>
+                  <SC.ItemTitle>Black Edition Stand</SC.ItemTitle>
+                  <SC.ItemPrice>Pledge $75 or more</SC.ItemPrice>
+                  <SC.Leftover>
+                    <p>64</p>
+                    <p>left</p>
+                  </SC.Leftover>
+                </SC.PledgeCon>
+              ) : (
+                <div>
+                  <SC.ItemTitle>Black Edition Stand</SC.ItemTitle>
+                  <SC.ItemPrice>Pledge $75 or more</SC.ItemPrice>
+                </div>
+              )}
             </SC.InputCon>
             <SC.ItemContent>
               You get a Black Special Edition computer stand and a personal
               thank you. You’ll be added to our Backer member list. Shipping is
               included.
             </SC.ItemContent>
-            <SC.Leftover>
-              <p>64</p>
-              <p>left</p>
-            </SC.Leftover>
+            {!isDesktop ? (
+              <SC.Leftover>
+                <p>64</p>
+                <p>left</p>
+              </SC.Leftover>
+            ) : null}
             {formik.values.choose === "blackEdition" ? (
               <>
                 <SC.Line></SC.Line>
@@ -135,7 +169,9 @@ const Project = ({ toggleProject, toggleGrace }) => {
                       <SC.Bucks>$</SC.Bucks>
                       <input type="text" name="pledge" placeholder="75" />
                     </label>
-                    <button type="button" onClick={toggleGrace}>Continue</button>
+                    <button type="button" onClick={toggleGrace}>
+                      Continue
+                    </button>
                   </div>
                 </SC.AccordCon>
               </>
@@ -152,20 +188,33 @@ const Project = ({ toggleProject, toggleGrace }) => {
                   checked={formik.values.choose === "mahogany"}
                 />
               </label>
-              <div>
-                <SC.ItemTitle>Mahogany Special Edition</SC.ItemTitle>
-                <SC.ItemPrice>Pledge $200 or more</SC.ItemPrice>
-              </div>
+              {isDesktop ? (
+                <SC.PledgeCon>
+                  <SC.ItemTitle>Mahogany Special Edition</SC.ItemTitle>
+                  <SC.ItemPrice>Pledge $200 or more</SC.ItemPrice>
+                  <SC.Leftover>
+                    <p>0</p>
+                    <p>left</p>
+                  </SC.Leftover>
+                </SC.PledgeCon>
+              ) : (
+                <div>
+                  <SC.ItemTitle>Mahogany Special Edition</SC.ItemTitle>
+                  <SC.ItemPrice>Pledge $200 or more</SC.ItemPrice>
+                </div>
+              )}
             </SC.InputCon>
             <SC.ItemContent>
               You get two Special Edition Mahogany stands, a Backer T-Shirt, and
               a personal thank you. You’ll be added to our Backer member list.
               Shipping is included.
             </SC.ItemContent>
-            <SC.Leftover>
-              <p>0</p>
-              <p>left</p>
-            </SC.Leftover>
+            {!isDesktop ? (
+              <SC.Leftover>
+                <p>0</p>
+                <p>left</p>
+              </SC.Leftover>
+            ) : null}
             {formik.values.choose === "mahogany" ? (
               <>
                 <SC.Line></SC.Line>
@@ -176,7 +225,9 @@ const Project = ({ toggleProject, toggleGrace }) => {
                       <SC.Bucks>$</SC.Bucks>
                       <input type="text" name="pledge" placeholder="200" />
                     </label>
-                    <button type="button" onClick={toggleGrace}>Continue</button>
+                    <button type="button" onClick={toggleGrace}>
+                      Continue
+                    </button>
                   </div>
                 </SC.AccordCon>
               </>
